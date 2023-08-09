@@ -23,7 +23,7 @@ const LandingPage = () => {
         </div>
         <div className='h-[40px] w-[70px] rounded-xl m-5 p-4 border-black bg-slate-400'>
           <button>
-            <a href="/music">Música</a>
+            <a href="/musica">Música</a>
           </button>
         </div>
       </div>
