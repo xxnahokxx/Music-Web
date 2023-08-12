@@ -11,10 +11,10 @@ const LandingPage = () => {
   return (
     <>
       <Card className='relative w-full h-screen bg-rose-600 flex flex-col-reverse'>
-        <div className='px-6 w-full h-screen md:absolute top-0 z-20 bg-black/30 flex flex-col items-start md:justify-end gap-12 py-6'>
-          <div className='col-span-2 text-[25px] self-start '>
+        <div className='px-6 w-full h-screen md:absolute top-0 z-20 bg-black/30 flex flex-col items-start md:justify-end gap-12 py-6 font-mono'>
+          <div className='col-span-2 text-[25px] self-start font-bold'>
             <h1>Bienvenidos a mi página web</h1>
-            <h2 className='font-bold text-[40px]'>Hola soy M!Ki</h2>
+            <h2 className='text-[40px]'>Hola soy M!Ki</h2>
           </div>
           <div className='flex gap-3'>
             <Link href="/cursos">
@@ -24,7 +24,7 @@ const LandingPage = () => {
               <Button color='danger'>Musica</Button>
             </Link>
           </div>
-          <div className='w-[100%] md:w-[50%] text-justify text-tiny'>
+          <div className='w-[100%] md:w-[50%] text-justify text-tiny font-semibold'>
             <p>Soy músico de Córdoba, Argentina. Me dedico a cantar, componer canciones y producir música. Te invito a que puedas escuchar mí primer single  <b>Picasso </b> en todas las plataformas digitales.
               Además te cuento que soy profesor de canto y de Teoría musical.
               Aquí están mis redes sociales para que no te pierdas ningún contenido.
