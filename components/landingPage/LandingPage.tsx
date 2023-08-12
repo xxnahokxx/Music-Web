@@ -14,7 +14,7 @@ const LandingPage = () => {
       <div className='text-slate-500 text-2xl'>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure quas quae, iste, sit aspernatur repellendus mollitia cum, eaque ex illo consequatur suscipit adipisci? Ratione animi voluptatibus laudantium incidunt atque distinctio!</p>
       </div>
-      <br/>
+      <br />
       <div className='flex flex-row m-auto justify-center'>
         <div className='h-[40px] w-[70px] rounded-xl m-5 p-4 border-black bg-slate-400'>
           <button>

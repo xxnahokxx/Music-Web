@@ -1,5 +1,4 @@
 import Navbar from '@/components/navbar/Navbar'
-import { NextUIProvider } from '@nextui-org/react'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
