@@ -26,7 +26,7 @@ const CardSection = ({ data }: { data: Cursos }) => {
           </div>
         </div>
         <Button radius="full" size="sm" className='opacity-0 transition-opacity duration-500'><a href="https://wa.me/3543692522" target="_blank" rel="noopener noreferrer">
-          Contacto
+          Conta
         </a></Button>
       </CardFooter>
     </Card>
