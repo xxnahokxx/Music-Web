@@ -2,8 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body{
-    background: linear-gradient(to right, #f4c4f3, #fc67fa);
-} */
+body{
+    background: linear-gradient(to right, #f8c8d4, #fed0db);
+} 
 
+.text-shadow{
+    text-shadow: 0 0 17px black;
+}
 

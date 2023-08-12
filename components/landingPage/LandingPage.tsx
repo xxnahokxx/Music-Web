@@ -5,6 +5,9 @@ import { Button, Card } from '@nextui-org/react';
 import Link from 'next/link';
 
 const LandingPage = () => {
+  //f8c8d4
+  //fed0db
+  //fbd0d9
   return (
     <>
       <Card className='relative w-full h-screen bg-rose-600 flex flex-col-reverse'>
