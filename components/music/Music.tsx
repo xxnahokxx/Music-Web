@@ -1,18 +1,15 @@
 
 const Music = () => {
   return (
-    <div className="flex flex-col h-3/6 w-[50%] justify-center m-auto pt-[10%]" >
+    <div className=" h-full bg-slate-400 w-[100%] pt-[10%]" >
       <h1>Nombre de la cancion</h1>
-      <div>
-      <iframe 
-      width="650" 
-      height="355" 
-      src="https://www.youtube.com/embed/GJLxxB1hofI" 
-      title="YouTube video player" 
-      frameBorder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      <iframe
+        className="w-[90%] h-[56%] mx-auto my-5 "
+      src="https://www.youtube.com/embed/GJLxxB1hofI"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowFullScreen></iframe>
-      </div>
       <div>
         Redes
       </div>

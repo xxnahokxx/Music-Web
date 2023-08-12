@@ -1,35 +1,74 @@
 "use client"
-import Link from 'next/link'
-import React from 'react'
 import { usePathname } from "next/navigation"
+import React from "react";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/react";
 
-const Navbar = () => {
+export default function App() {
 
-  const pathname = usePathname()
+  const pathName = usePathname();
+
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
 
 
-  if (pathname !== "/") {
+  if (pathName !== "/") {
+
     return (
-      <div className='flex justify-between  mx-auto py-5 px-7 bg-emerald-700 text-white font-bold fixed w-full top-0'>
-        <div>
-          logo
-        </div>
-        <div className=''>
-          <ul className='flex gap-5'>
-            <Link href={"/"}>
-              <li>Inicio</li>
+      <Navbar className="[&>header]:max-w-[100%] px-10 fixed" onMenuOpenChange={setIsMenuOpen}>
+        <NavbarContent>
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="sm:hidden"
+          />
+          <NavbarBrand>
+            <Link href="/">
+              <p className="font-bold text-inherit">Music</p>
             </Link>
-            <Link href={"/musica"}>
-              <li>Música</li>
-            </Link>
-            <Link href={"/cursos"}>
-              <li>Cursos</li>
-            </Link>
-          </ul>
-        </div>
-      </div>
-    )
-  }
-}
+          </NavbarBrand>
+        </NavbarContent>
 
-export default Navbar
+        <NavbarContent className="hidden sm:flex gap-4" justify="center">
+          <NavbarItem isActive>
+            <Link href="/cursos" aria-current="page">
+              Cursos
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link color="foreground" href="/musica">
+              Musica
+            </Link>
+          </NavbarItem>
+        </NavbarContent>
+        <NavbarMenu>
+          {menuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                color={
+                  index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+                }
+                className="w-full"
+                href="#"
+                size="lg"
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </NavbarMenu>
+      </Navbar>
+    );
+  }
+
+}
