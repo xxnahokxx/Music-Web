@@ -1,10 +1,39 @@
+"use client"
 import React from 'react'
 import { Image } from "@nextui-org/image";
+import { Button, Card } from '@nextui-org/react';
+import Link from 'next/link';
 
 const LandingPage = () => {
   return (
-    <div>
-      <div className='flex flex-row justify-between text-slate-700 drop-shadow-md shadow-violet-600 text-3xl '>
+    <>
+      <Card className='relative w-full h-screen bg-rose-600 flex flex-col-reverse'>
+        <div className='px-6 w-full h-screen md:absolute top-0 z-20 bg-black/30 flex flex-col items-start md:justify-end gap-12 py-6'>
+          <div className='col-span-2 text-[25px] self-start '>
+            <h1>Bienvenidos a mi página web</h1>
+            <h2 className='font-bold text-[40px]'>Hola soy M!Ki</h2>
+          </div>
+          <div className='flex gap-3'>
+            <Link href="/cursos">
+              <Button color='danger'>Cursos</Button>
+            </Link>
+            <Link href="/musica">
+              <Button color='danger'>Musica</Button>
+            </Link>
+          </div>
+          <div className='w-[100%] md:w-[50%] text-justify text-tiny'>
+            <p>Soy músico de Córdoba, Argentina. Me dedico a cantar, componer canciones y producir música. Te invito a que puedas escuchar mí primer single  <b>Picasso </b> en todas las plataformas digitales.
+              Además te cuento que soy profesor de canto y de Teoría musical.
+              Aquí están mis redes sociales para que no te pierdas ningún contenido.
+              Gracias por visitar la página.</p>
+          </div>
+        </div>
+        <div>
+        </div>
+        <Image removeWrapper src="https://res.cloudinary.com/parcelas/image/upload/v1691799021/imagenLanding_j5rwbm.jpg" alt="perfil" className='object-cover' />
+
+      </Card>
+      {/* <div className='flex flex-row justify-between text-slate-700 drop-shadow-md shadow-violet-600 text-3xl '>
         <div className='mt-7 m-2 '>
           <h1>Bienvenidos a mi página web</h1>
           <h2>Hola soy M!Ki</h2>
@@ -32,9 +61,9 @@ const LandingPage = () => {
           </button>
         </div>
 
-      </div>
+      </div> */}
 
-    </div>
+    </>
   )
 }
 

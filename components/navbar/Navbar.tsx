@@ -13,40 +13,33 @@ export default function App() {
     "Profile",
     "Dashboard",
     "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
   ];
 
 
   if (pathName !== "/") {
 
     return (
-      <Navbar className="[&>header]:max-w-[100%] px-10 fixed" onMenuOpenChange={setIsMenuOpen}>
+      <Navbar className="[&>header]:max-w-[100%] md:px-10 fixed" onMenuOpenChange={setIsMenuOpen}>
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             className="sm:hidden"
           />
           <NavbarBrand>
-            <Link href="/">
+            <Link href="/" color="danger">
               <p className="font-bold text-inherit">Music</p>
             </Link>
           </NavbarBrand>
         </NavbarContent>
 
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
-          <NavbarItem isActive>
-            <Link href="/cursos" aria-current="page">
+          <NavbarItem >
+            <Link color="danger" href="/cursos" aria-current="page">
               Cursos
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/musica">
+            <Link color="danger" href="/musica">
               Musica
             </Link>
           </NavbarItem>
