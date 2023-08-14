@@ -3,7 +3,7 @@ import Music from '../../components/music/Music'
 
 export default function Musica() {
   return (
-    <div className='h-screen container mx-auto'>
+    <div className='h-screen container mx-auto pt-7'>
       <Music />
     </div>
   )

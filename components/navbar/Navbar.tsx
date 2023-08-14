@@ -11,16 +11,21 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
+    {
+      name: "Música",
+      url: "/musica"
+    },
+    {
+      name: "Cursos",
+      url: "/cursos"
+    }
   ];
 
 
   if (pathName !== "/") {
 
     return (
-      <Navbar className="[&>header]:max-w-[100%] md:px-10 fixed font-serif font-bold text-shadow" onMenuOpenChange={setIsMenuOpen}>
+      <Navbar className="[&>header]:max-w-[100%] justify-end md:px-10 fixed font-serif font-bold text-shadow" onMenuOpenChange={setIsMenuOpen}>
         <NavbarContent>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -45,18 +50,18 @@ export default function App() {
             </Link>
           </NavbarItem>
         </NavbarContent>
-        <NavbarMenu>
+        <NavbarMenu className="self-end">
           {menuItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
+            <NavbarMenuItem key={`${item.name}-${index}`}>
               <Link
                 color={
                   index === 2 ? "primary" : index === menuItems.length - 1 ? "foreground" : "danger"
                 }
                 className="w-full"
-                href="#"
+                href={item.url}
                 size="lg"
               >
-                {item}
+                {item.name}
               </Link>
             </NavbarMenuItem>
           ))}
